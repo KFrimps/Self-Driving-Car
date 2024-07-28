@@ -55,6 +55,8 @@ The preprocessing steps include:
 - Balancing the dataset by reducing the number of samples with a steering angle of zero.
 - Splitting the dataset into training and validation sets.
 
+The code for data preprocessing can be found in `src/data_preprocessing.py`.
+
 ## Data Augmentation
 
 To create a more robust model, several data augmentation techniques are applied:
@@ -63,6 +65,8 @@ To create a more robust model, several data augmentation techniques are applied:
 - Pan: Randomly shifts the image horizontally and vertically.
 - Brightness: Randomly changes the brightness of the image.
 - Flip: Randomly flips the image horizontally and inverts the steering angle.
+
+The code for data augmentation can be found in `src/data_augmentation.py`.
 
 ## Model Architecture
 
@@ -73,6 +77,8 @@ The model is based on NVIDIA's architecture for self-driving cars, consisting of
 - Dense layers with ELU activation.
 - Output layer with a single neuron for predicting the steering angle
 
+The model architecture is defined in `src/model.py`.
+
 ## Training the Model
 
 The model is trained using the Mean Squared Error (MSE) loss function and the Adam optimizer. The training process includes:
@@ -80,6 +86,8 @@ The model is trained using the Mean Squared Error (MSE) loss function and the Ad
 - Data augmentation using a custom batch generator.
 - Training for a specified number of epochs.
 - Validation using the validation set.
+
+The training process is handled by the code in `src/train.py`.
 
 ## Evaluation
 The model's performance is evaluated by plotting the training and validation loss over the epochs. The final model is saved as model.h5.
